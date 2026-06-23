@@ -1,662 +1,525 @@
 ---
-# try also 'default' to start simple
 theme: seriph
-# random image from a curated Unsplash collection by Anthony
-# like them? see https://unsplash.com/collections/94734566/slidev
-background: https://cover.sli.dev
-# some information about your slides (markdown enabled)
-title: Welcome to Slidev
+title: 风起于未至之境
 info: |
-  ## Slidev Starter Template
-  Presentation slides for developers.
-
-  Learn more at [Sli.dev](https://sli.dev)
-# apply UnoCSS classes to the current slide
-class: text-center
-# https://sli.dev/features/drawing
+  基于 2026-06-23 网络公开资料整理。相关内容来自媒体报道、社区讨论与公开网页，
+  不代表官方发布信息，可能存在不准确或后续变化。
+class: deck-root
 drawings:
   persist: false
-# slide transition: https://sli.dev/guide/animations.html#slide-transitions
 transition: slide-left
-# enable Comark Syntax: https://comark.dev/syntax/markdown
 comark: true
-# duration of the presentation
-duration: 35min
+duration: 25min
+mdc: true
+fonts:
+  sans: Inter
+  serif: Noto Serif SC
+  mono: JetBrains Mono
 ---
 
-# Welcome to Slidev
+<div class="cover-stage">
+  <div class="cover-kicker" v-click="6">GPT-5.6 网络消息观察</div>
+  <h1 class="cover-title">风起于未至之境</h1>
+  <div class="cover-subtitle" v-click>下一轮模型竞速的四个信号</div>
 
-Presentation slides for developers
+  <div class="cover-signal-row">
+    <div class="cover-chip ui" v-click>UI 生成</div>
+    <div class="cover-chip vision" v-click>视觉理解</div>
+    <div class="cover-core" v-click="6">GPT-5.6</div>
+    <div class="cover-chip agent" v-click>Agent</div>
+    <div class="cover-chip voice" v-click>双向语音</div>
+  </div>
 
-<div @click="$slidev.nav.next" class="mt-12 py-1" hover:bg="white op-10">
-  Press Space for next page <carbon:arrow-right />
+  <div class="source-banner" v-click="7">
+  基于网络公开资料整理，相关信息不一定准确，请以 OpenAI 后续官方发布为准。
+  </div>
+
 </div>
 
-<div class="abs-br m-6 text-xl">
-  <button @click="$slidev.nav.openInEditor()" title="Open in Editor" class="slidev-icon-btn">
-    <carbon:edit />
-  </button>
-  <a href="https://github.com/slidevjs/slidev" target="_blank" class="slidev-icon-btn">
-    <carbon:logo-github />
-  </a>
-</div>
-
 <!--
-The last comment block of each slide will be treated as slide notes. It will be visible and editable in Presenter Mode along with the slide. [Read more in the docs](https://sli.dev/guide/syntax.html#notes)
+开场先给免责声明，但不要让它成为整场的主角。讲法：今天我们不把这些内容当成官方发布，而是把它当作市场风向和产品路线的提前观察。“风起于未至之境”指的是：模型还未正式落地，但市场已经能感到方向变化。
+[click] 先点出这是网络资料整理。
+[click] 再展示四个核心能力方向：UI、视觉、Agent、语音。
 -->
-
----
-transition: fade-out
----
-
-# What is Slidev?
-
-Slidev is a slides maker and presenter designed for developers, consist of the following features
-
-- 📝 **Text-based** - focus on the content with Markdown, and then style them later
-- 🎨 **Themable** - themes can be shared and re-used as npm packages
-- 🧑‍💻 **Developer Friendly** - code highlighting, live coding with autocompletion
-- 🤹 **Interactive** - embed Vue components to enhance your expressions
-- 🎥 **Recording** - built-in recording and camera view
-- 📤 **Portable** - export to PDF, PPTX, PNGs, or even a hostable SPA
-- 🛠 **Hackable** - virtually anything that's possible on a webpage is possible in Slidev
-<br>
-<br>
-
-Read more about [Why Slidev?](https://sli.dev/guide/why)
-
-<!--
-You can have `style` tag in markdown to override the style for the current page.
-Learn more: https://sli.dev/features/slide-scope-style
--->
-
-<style>
-h1 {
-  background-color: #2B90B6;
-  background-image: linear-gradient(45deg, #4EC5D4 10%, #146b8c 20%);
-  background-size: 100%;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-text-fill-color: transparent;
-}
-</style>
-
-<!--
-Here is another comment.
--->
-
----
-transition: slide-up
-level: 2
----
-
-# Navigation
-
-Hover on the bottom-left corner to see the navigation's controls panel, [learn more](https://sli.dev/guide/ui#navigation-bar)
-
-## Keyboard Shortcuts
-
-|                                                     |                             |
-| --------------------------------------------------- | --------------------------- |
-| <kbd>right</kbd> / <kbd>space</kbd>                 | next animation or slide     |
-| <kbd>left</kbd>  / <kbd>shift</kbd><kbd>space</kbd> | previous animation or slide |
-| <kbd>up</kbd>                                       | previous slide              |
-| <kbd>down</kbd>                                     | next slide                  |
-
-<!-- https://sli.dev/guide/animations.html#click-animation -->
-<img
-  v-click
-  class="absolute -bottom-9 -left-7 w-80 opacity-50"
-  src="https://sli.dev/assets/arrow-bottom-left.svg"
-  alt=""
-/>
-<p v-after class="absolute bottom-23 left-45 opacity-30 transform -rotate-10">Here!</p>
 
 ---
 layout: two-cols
-layoutClass: gap-16
 ---
 
-# Table of contents
-
-You can use the `Toc` component to generate a table of contents for your slides:
-
-```html
-<Toc minDepth="1" maxDepth="1" />
-```
-
-The title will be inferred from your slide content, or you can override it with `title` and `level` in your frontmatter.
+<div class="tweet-box">
+  <Tweet id="2063245096951160865" scale="0.7"/>
+</div>
 
 ::right::
 
-<Toc text-sm minDepth="1" maxDepth="2" />
+<div v-click style="position: absolute; top: 25%; margin-left: -50px; width: 50%">
+本周，OpenAI 正在测试 GPT-5.6 的 2 个新检查点，它们在一天之内相继添加——kepler 和 kindle。消息人士告诉我，OpenAI 已将 kindle-alpha 选为发布候选版本。
+
+我在 xhigh 上对两个模型运行了相同的提示，以便你们自行比较。但根据我的经验，平均而言，kindle 相对于 kepler 是一种退步，尽管它们有时仅产生预期范围内的差异。
+
+我预计 5.6 将在本月晚些时候推出，因此他们仍有时间继续优化并放弃 kindle 作为 RC，因为以其当前形式，它将被 Mythos 轻松击败。
+</div>
 
 ---
-layout: image-right
-image: https://cover.sli.dev
+layout: two-cols
 ---
 
-# Code
+<div class="tweet-box">
+  <Tweet id="2064078302394917157" scale="0.35"/>
+</div>
 
-Use code snippets and get the highlighting directly, and even types hover!
+::right::
 
-```ts [filename-example.ts] {all|4|6|6-7|9|all} twoslash
-// TwoSlash enables TypeScript hover information
-// and errors in markdown code blocks
-// More at https://shiki.style/packages/twoslash
-import { computed, ref } from 'vue'
-
-const count = ref(0)
-const doubled = computed(() => count.value * 2)
-
-doubled.value = 2
-```
-
-<arrow v-click="[4, 5]" x1="350" y1="310" x2="195" y2="342" color="#953" width="2" arrowSize="1" />
-
-<!-- This allow you to embed external code blocks -->
-<<< @/snippets/external.ts#snippet
-
-<!-- Footer -->
-
-[Learn more](https://sli.dev/features/line-highlighting)
-
-<!-- Inline style -->
-<style>
-.footnotes-sep {
-  @apply mt-5 opacity-10;
-}
-.footnotes {
-  @apply text-sm opacity-75;
-}
-.footnote-backref {
-  display: none;
-}
-</style>
+<SlidevVideo v-click controls style="height: 35%">
+  <!-- HTML video 元素中可以包含的任何内容。 -->
+  <source src="/videos/XjHyxKveTVG_xzPR.mp4" type="video/mp4" />
+  <p>
+    你的浏览器不支持视频。你可以在
+    <a href="/videos/XjHyxKveTVG_xzPR.mp4">这里</a>下载。
+  </p>
+</SlidevVideo>
 
 <!--
-Notes can also sync with clicks
+Kindle (GPT-5.6) 已在 Arena 中被移除
 
-[click] This will be highlighted after the first click
+在 Kindle 被移除后不久，一个新模型 Levi 出现了。该模型的前端输出看起来类似于带有 Design 技能的 OpenAI 模型。Levi 可能也是 GPT-5.6
 
-[click] Highlighted with `count = ref(0)`
+以下是与 GPT-5.5 的比较
 
-[click:3] Last click (skip two clicks)
+提示词：“为即将到来的世界杯创建一个网站”
 -->
-
----
-level: 2
----
-
-# Shiki Magic Move
-
-Powered by [shiki-magic-move](https://shiki-magic-move.netlify.app/), Slidev supports animations across multiple code snippets.
-
-Add multiple code blocks and wrap them with <code>````md magic-move</code> (four backticks) to enable the magic move. For example:
-
-````md magic-move {lines: true}
-```ts {*|2|*}
-// step 1
-const author = reactive({
-  name: 'John Doe',
-  books: [
-    'Vue 2 - Advanced Guide',
-    'Vue 3 - Basic Guide',
-    'Vue 4 - The Mystery'
-  ]
-})
-```
-
-```ts {*|1-2|3-4|3-4,8}
-// step 2
-export default {
-  data() {
-    return {
-      author: {
-        name: 'John Doe',
-        books: [
-          'Vue 2 - Advanced Guide',
-          'Vue 3 - Basic Guide',
-          'Vue 4 - The Mystery'
-        ]
-      }
-    }
-  }
-}
-```
-
-```ts
-// step 3
-export default {
-  data: () => ({
-    author: {
-      name: 'John Doe',
-      books: [
-        'Vue 2 - Advanced Guide',
-        'Vue 3 - Basic Guide',
-        'Vue 4 - The Mystery'
-      ]
-    }
-  })
-}
-```
-
-Non-code blocks are ignored.
-
-```vue
-<!-- step 4 -->
-<script setup>
-const author = {
-  name: 'John Doe',
-  books: [
-    'Vue 2 - Advanced Guide',
-    'Vue 3 - Basic Guide',
-    'Vue 4 - The Mystery'
-  ]
-}
-</script>
-```
-````
-
----
-
-# Components
-
-<div grid="~ cols-2 gap-4">
-<div>
-
-You can use Vue components directly inside your slides.
-
-We have provided a few built-in components like `<Tweet/>`, `<BlueSky/>`, and `<Youtube/>` that you can use directly. And adding your custom components is also super easy.
-
-```html
-<Counter :count="10" />
-```
-
-<!-- ./components/Counter.vue -->
-<Counter :count="10" m="t-4" />
-
-Check out [the guides](https://sli.dev/builtin/components.html) for more.
-
-</div>
-<div>
-
-```html
-<Tweet id="1390115482657726468" />
-```
-
-<Tweet id="1390115482657726468" scale="0.65" />
-
-</div>
-</div>
-
-<!--
-Presenter note with **bold**, *italic*, and ~~striked~~ text.
-
-Also, HTML elements are valid:
-<div class="flex w-full">
-  <span style="flex-grow: 1;">Left content</span>
-  <span>Right content</span>
-</div>
--->
-
----
-class: px-20
----
-
-# Themes
-
-Slidev comes with powerful theming support. Themes can provide styles, layouts, components, or even configurations for tools. Switching between themes by just **one edit** in your frontmatter:
-
-<div grid="~ cols-2 gap-2" m="t-2">
-
-```yaml
----
-theme: default
----
-```
-
-```yaml
----
-theme: seriph
----
-```
-
-<img border="rounded" src="https://github.com/slidevjs/themes/blob/main/screenshots/theme-default/01.png?raw=true" alt="">
-
-<img border="rounded" src="https://github.com/slidevjs/themes/blob/main/screenshots/theme-seriph/01.png?raw=true" alt="">
-
-</div>
-
-Read more about [How to use a theme](https://sli.dev/guide/theme-addon#use-theme) and
-check out the [Awesome Themes Gallery](https://sli.dev/resources/theme-gallery).
-
----
-
-# Clicks Animations
-
-You can add `v-click` to elements to add a click animation.
-
-<div v-click>
-
-This shows up when you press <kbd>space</kbd> or <kbd>right</kbd>, or click outside the slide on the right.
-
-```html
-<div v-click>This shows up when you trigger a click animation.</div>
-```
-
-</div>
-
-<p v-click>
-You can also add modifiers to change the animation:
-</p>
-
-<div class="grid gap-3 mt-4 text-sm" style="grid-template-columns: repeat(3, 1fr) 1.5fr 1fr">
-  <div v-after.up class="p-3 rounded border border-primary/20 bg-primary/10">
-    <div class="font-mono text-xs opacity-60 mb-1">v-click.up</div>
-    <div>Slide from bottom</div>
-  </div>
-  <div v-click.fade-in class="p-3 rounded border border-primary/30 bg-primary/15">
-    <div class="font-mono text-xs opacity-60 mb-1">v-click.fade-in</div>
-    <div>Fade in</div>
-  </div>
-  <div v-click.fade class="p-3 rounded border border-primary/40 bg-primary/20">
-    <div class="font-mono text-xs opacity-60 mb-1">v-click.fade</div>
-    <div>Dim (0.5 opacity)</div>
-  </div>
-  <div v-click.fade.right.scale class="p-3 rounded border border-primary/50 bg-primary/25">
-    <div class="font-mono text-xs opacity-60 mb-1">v-click.fade.right.scale</div>
-    <div>Composed</div>
-  </div>
-  <div v-click.none class="p-3 rounded border border-primary/60 bg-primary/30">
-    <div class="font-mono text-xs opacity-60 mb-1">v-click.none</div>
-    <div>No transition</div>
-  </div>
-</div>
-
-<v-click>
-
-The <span v-mark.red="7"><code>v-mark</code> directive</span>
-also allows you to add
-<span v-mark.circle.orange="8">inline marks</span>
-, powered by [Rough Notation](https://roughnotation.com/):
-
-```html
-<span v-mark.underline.orange>inline markers</span>
-```
-
-</v-click>
-
-<div v-click mt-12>
-
-[Learn more](https://sli.dev/guide/animations#click-animation)
-
-</div>
-
----
-
-# Motions
-
-Motion animations are powered by [@vueuse/motion](https://motion.vueuse.org/), triggered by `v-motion` directive.
-
-```html
-<div
-  v-motion
-  :initial="{ x: -80 }"
-  :enter="{ x: 0 }"
-  :click-3="{ x: 80 }"
-  :leave="{ x: 1000 }"
->
-  Slidev
-</div>
-```
-
-<div class="w-60 relative">
-  <div class="relative w-40 h-40">
-    <img
-      v-motion
-      :initial="{ x: 800, y: -100, scale: 1.5, rotate: -50 }"
-      :enter="final"
-      class="absolute inset-0"
-      src="https://sli.dev/logo-square.png"
-      alt=""
-    />
-    <img
-      v-motion
-      :initial="{ y: 500, x: -100, scale: 2 }"
-      :enter="final"
-      class="absolute inset-0"
-      src="https://sli.dev/logo-circle.png"
-      alt=""
-    />
-    <img
-      v-motion
-      :initial="{ x: 600, y: 400, scale: 2, rotate: 100 }"
-      :enter="final"
-      class="absolute inset-0"
-      src="https://sli.dev/logo-triangle.png"
-      alt=""
-    />
-  </div>
-
-  <div
-    class="text-5xl absolute top-14 left-40 text-[#2B90B6] -z-1"
-    v-motion
-    :initial="{ x: -80, opacity: 0}"
-    :enter="{ x: 0, opacity: 1, transition: { delay: 2000, duration: 1000 } }">
-    Slidev
-  </div>
-</div>
-
-<!-- vue script setup scripts can be directly used in markdown, and will only affects current page -->
-<script setup lang="ts">
-const final = {
-  x: 0,
-  y: 0,
-  rotate: 0,
-  scale: 1,
-  transition: {
-    type: 'spring',
-    damping: 10,
-    stiffness: 20,
-    mass: 2
-  }
-}
-</script>
-
-<div
-  v-motion
-  :initial="{ x:35, y: 30, opacity: 0}"
-  :enter="{ y: 0, opacity: 1, transition: { delay: 3500 } }">
-
-[Learn more](https://sli.dev/guide/animations.html#motion)
-
-</div>
-
----
-
-# $\LaTeX$
-
-$\LaTeX$ is supported out-of-box. Powered by [$\KaTeX$](https://katex.org/).
-
-<div h-3 />
-
-Inline $\sqrt{3x-1}+(1+x)^2$
-
-Block
-$$ {1|3|all}
-\begin{aligned}
-\nabla \cdot \vec{E} &= \frac{\rho}{\varepsilon_0} \\
-\nabla \cdot \vec{B} &= 0 \\
-\nabla \times \vec{E} &= -\frac{\partial\vec{B}}{\partial t} \\
-\nabla \times \vec{B} &= \mu_0\vec{J} + \mu_0\varepsilon_0\frac{\partial\vec{E}}{\partial t}
-\end{aligned}
-$$
-
-[Learn more](https://sli.dev/features/latex)
-
----
-
-# Diagrams
-
-You can create diagrams / graphs from textual descriptions, directly in your Markdown.
-
-<div class="grid grid-cols-4 gap-5 pt-4 -mb-6">
-
-```mermaid {scale: 0.5, alt: 'A simple sequence diagram'}
-sequenceDiagram
-    Alice->John: Hello John, how are you?
-    Note over Alice,John: A typical interaction
-```
-
-```mermaid {theme: 'neutral', scale: 0.8}
-graph TD
-B[Text] --> C{Decision}
-C -->|One| D[Result 1]
-C -->|Two| E[Result 2]
-```
-
-```mermaid
-mindmap
-  root((mindmap))
-    Origins
-      Long history
-      ::icon(fa fa-book)
-      Popularisation
-        British popular psychology author Tony Buzan
-    Research
-      On effectiveness<br/>and features
-      On Automatic creation
-        Uses
-            Creative techniques
-            Strategic planning
-            Argument mapping
-    Tools
-      Pen and paper
-      Mermaid
-```
-
-```plantuml {scale: 0.7}
-@startuml
-
-package "Some Group" {
-  HTTP - [First Component]
-  [Another Component]
-}
-
-node "Other Groups" {
-  FTP - [Second Component]
-  [First Component] --> FTP
-}
-
-cloud {
-  [Example 1]
-}
-
-database "MySql" {
-  folder "This is my folder" {
-    [Folder 3]
-  }
-  frame "Foo" {
-    [Frame 4]
-  }
-}
-
-[Another Component] --> [Example 1]
-[Example 1] --> [Folder 3]
-[Folder 3] --> [Frame 4]
-
-@enduml
-```
-
-</div>
-
-Learn more: [Mermaid Diagrams](https://sli.dev/features/mermaid) and [PlantUML Diagrams](https://sli.dev/features/plantuml)
-
----
-foo: bar
-dragPos:
-  square: 691,32,167,_,-16
----
-
-# Draggable Elements
-
-Double-click on the draggable elements to edit their positions.
-
-<br>
-
-###### Directive Usage
-
-```md
-<img v-drag="'square'" src="https://sli.dev/logo.png">
-```
-
-<br>
-
-###### Component Usage
-
-```md
-<v-drag text-3xl>
-  <div class="i-carbon:arrow-up" />
-  Use the `v-drag` component to have a draggable container!
-</v-drag>
-```
-
-<v-drag pos="663,206,261,_,-15">
-  <div text-center text-3xl border border-main rounded>
-    Double-click me!
-  </div>
-</v-drag>
-
-<img v-drag="'square'" src="https://sli.dev/logo.png">
-
-###### Draggable Arrow
-
-```md
-<v-drag-arrow two-way />
-```
-
-<v-drag-arrow pos="67,452,253,46" two-way op70 />
-
----
-src: ./pages/imported-slides.md
-hide: false
----
-
----
-
-# Monaco Editor
-
-Slidev provides built-in Monaco Editor support.
-
-Add `{monaco}` to the code block to turn it into an editor:
-
-```ts {monaco}
-import { ref } from 'vue'
-import { emptyArray } from './external'
-
-const arr = ref(emptyArray(10))
-```
-
-Use `{monaco-run}` to create an editor that can execute the code directly in the slide:
-
-```ts {monaco-run}
-import { version } from 'vue'
-import { emptyArray, sayHello } from './external'
-
-sayHello()
-console.log(`vue ${version}`)
-console.log(emptyArray<number>(10).reduce(fib => [...fib, fib.at(-1)! + fib.at(-2)!], [1, 1]))
-```
 
 ---
 layout: center
-class: text-center
+class: thesis
 ---
 
-# Learn More
+# 核心判断
 
-[Documentation](https://sli.dev) · [GitHub](https://github.com/slidevjs/slidev) · [Showcases](https://sli.dev/resources/showcases)
+<div
+  class="big-claim"
+  v-motion
+  :initial="{ y: 24, opacity: 0 }"
+  :enter="{ y: 0, opacity: 1 }"
+>
+GPT-5.6 的讨论重点，已经从“模型更聪明”转向<br>
+<strong>能否直接进入真实工作流</strong>
+</div>
 
-<PoweredBySlidev mt-10 />
+<div class="three-points">
+  <div v-click><b>生成</b><span style="font-size: 95%;">更完整的 UI、图像与交互产物</span></div>
+  <div v-click><b>执行</b><span style="font-size: 95%;">更长链路的编码与 Agent 任务</span></div>
+  <div v-click><b>协作</b><span style="font-size: 90%;">更自然的实时语音与多模态输入</span></div>
+</div>
+
+<!--
+这一页要把观众从“又一个模型版本号”带到“工作流能力”的视角。
+[click] UI 和视觉是入口。
+[click] Agent 和编码是生产力落点。
+[click] 语音和多模态是交互方式的变化。
+-->
+
+---
+layout: default
+---
+
+# 一张图看信息如何发酵
+
+```mermaid
+flowchart LR
+  A["内部代号<br/>kindle / kepler"] --> B["社区实测<br/>UI、视觉、Coding"]
+  B --> C["媒体放大<br/>GPT-5.6 Pro / Bidi"]
+  C --> D["竞品对标<br/>Mythos / Gemini"]
+  D --> E["采用判断<br/>成本、稳定性、工作流"]
+
+  classDef blue fill:#dbeafe,stroke:#2563eb,color:#102033;
+  classDef teal fill:#ccfbf1,stroke:#0f766e,color:#102033;
+  classDef amber fill:#fef3c7,stroke:#d97706,color:#102033;
+  class A,B blue;
+  class C,D amber;
+  class E teal;
+```
+
+<div class="caption" v-click>真正值得关注的不是单条爆料，而是这些爆料共同指向的产品方向。</div>
+
+<!--
+这页用流程图解释：信息先从内部代号和实测流出，再经过媒体叙事，最后影响市场预期。讲的时候强调，我们看的是方向，不是押注每个细节都正确。
+-->
+
+---
+transition: fade
+---
+
+# 四个关键词：这次讨论为什么热
+
+<div class="keyword-grid">
+  <div class="keyword-card ui-card" v-click>
+    <div class="keyword-icon"><carbon:application-web /></div>
+    <h2>前端生成</h2>
+    <p>从“写代码”走向“生成可看的产品界面”。</p>
+  </div>
+  <div class="keyword-card vision-card" v-click>
+    <div class="keyword-icon"><carbon:image /></div>
+    <h2>视觉推理</h2>
+    <p>看图、补全、复刻、解释图表，成为多模态入口。</p>
+  </div>
+  <div class="keyword-card agent-card" v-click>
+    <div class="keyword-icon"><carbon:flow-stream /></div>
+    <h2>Agentic Coding</h2>
+    <p>长任务、跨文件、持续修复，决定开发者体感。</p>
+  </div>
+  <div class="keyword-card voice-card" v-click>
+    <div class="keyword-icon"><carbon:microphone /></div>
+    <h2>双向对话</h2>
+    <p>边听边说、可打断、可恢复，改变语音助手体验。</p>
+  </div>
+</div>
+
+<!--
+这一页开始增强舞台感。四张卡逐个点击出现，每张只讲一句：界面、视觉、Agent、语音。这四个方向构成后面所有分析的骨架。
+-->
+
+---
+layout: image-right
+image: https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1600&q=80
+---
+
+# 方向一：UI 生成从 Demo 走向产品原型
+
+<v-clicks>
+
+- <span style="font-size: 95%;">更少提示词技巧，直接生成完整页面</span>
+- <span style="font-size: 95%;">更重视视觉层次、间距、组件状态</span>
+- <span style="font-size: 95%;">从“代码能跑”升级为“产品经理能看、前端能改”</span>
+
+</v-clicks>
+
+<div class="mini-pipeline" v-click>
+  <span>Prompt</span>
+  <span>Layout</span>
+  <span>Component</span>
+  <span>Prototype</span>
+</div>
+
+<!--
+讲法：如果 GPT-5.6 真在 UI 生成上有明显提升，价值不只是“帮前端写代码”，而是缩短从想法到原型的时间。
+[click] 先讲三个变化。
+[click] 最后用 pipeline 总结：Prompt 到 Prototype。
+-->
+
+---
+layout: default
+---
+
+# UI 能力要看三层
+
+<div class="layer-stack">
+  <div class="layer layer-1" v-click>
+    <b>视觉层</b>
+    <span>颜色、层次、排版、留白、图标</span>
+  </div>
+  <div class="layer layer-2" v-click>
+    <b>工程层</b>
+    <span>组件结构、响应式、可维护 CSS、状态处理</span>
+  </div>
+  <div class="layer layer-3" v-click>
+    <b>产品层</b>
+    <span>任务路径、空状态、错误态、真实数据密度</span>
+  </div>
+</div>
+
+<div class="caption" v-click>好看的截图不是终点；能被团队接手，才是生产力。</div>
+
+<!--
+这页提醒观众，UI 生成不能只看截图。视觉层吸引人，工程层决定能不能合并，产品层决定是否真的可用。
+[click] 逐层展开。
+[click] 最后用一句话落到企业采用。
+-->
+
+---
+layout: default
+---
+
+# 方向二：视觉能力变成多模态入口
+
+<div class="vision-board">
+  <div class="vision-tile main" v-click>
+    <h2>看懂</h2>
+    <p>截图、图表、设计稿、扫描件</p>
+  </div>
+  <div class="vision-tile" v-click>
+    <h2>补全</h2>
+    <p>遮挡区域、缺失结构、上下文线索</p>
+  </div>
+  <div class="vision-tile" v-click>
+    <h2>转化</h2>
+    <p>图像到代码、图像到说明、图像到流程</p>
+  </div>
+  <div class="vision-tile" v-click>
+    <h2>审查</h2>
+    <p>发现错位、遗漏、冲突和异常</p>
+  </div>
+</div>
+
+<!--
+这里把视觉能力讲成入口，而不是单点功能。它把图片变成模型能操作的上下文，让后续的代码、报告、流程都可以接上。
+-->
+
+---
+layout: two-cols
+layoutClass: gap-12
+---
+
+# 方向三：Agentic Coding 的真正分水岭
+
+<div class="agent-meter">
+  <div v-click><span style="width:45%"></span><b>写一段代码</b></div>
+  <div v-click><span style="width:66%"></span><b>改一个模块</b></div>
+  <div v-click><span style="width:82%"></span><b>修一组测试</b></div>
+  <div v-click><span style="width:94%"></span><b>完成跨仓库任务</b></div>
+</div>
+
+::right::
+
+<div class="callout dark" v-click>
+  <h2>关键不是“会不会写”</h2>
+  <p>而是能否持续理解目标、检查副作用、根据反馈修正，并在结束时留下可审查的结果。</p>
+</div>
+
+<!--
+这一页用进度条表现任务复杂度。讲的时候从下往上或从上往下都可以：简单代码已经不是稀缺能力，长链路自主修复才是分水岭。
+-->
+
+---
+layout: fact
+class: number-slide
+---
+
+# 150 万上下文
+
+<div class="fact-subtitle" v-click>如果这一数字成立，它改变的是“模型一次能带多少现场信息”。</div>
+
+<!--
+这页只做视觉冲击，不要展开太多。讲法：长上下文不是为了炫数字，而是为了把代码、文档、日志、会议纪要放进同一次推理里。
+-->
+
+---
+layout: default
+---
+
+# 长上下文的业务想象
+
+<div class="impact-grid">
+  <div v-click>
+    <h2>研发</h2>
+    <p>一次读完仓库、issue、日志、测试输出，减少来回补材料。</p>
+  </div>
+  <div v-click>
+    <h2>投研</h2>
+    <p>把财报、公告、访谈、竞品资料放入同一分析窗口。</p>
+  </div>
+  <div v-click>
+    <h2>运营</h2>
+    <p>跨系统 SOP、工单、会议纪要串成连续流程。</p>
+  </div>
+  <div v-click>
+    <h2>销售</h2>
+    <p>整合客户历史、产品资料、价格政策，生成下一步动作。</p>
+  </div>
+</div>
+
+<!--
+这一页用四个业务场景把“上下文”讲具体。它不是技术参数，而是减少上下文搬运成本。
+-->
+
+---
+layout: default
+---
+
+# GPT-Bidi-1：语音交互的下一种形态
+
+<div class="bidi">
+  <div class="bidi-box old" v-click>
+    <h2>轮流说话</h2>
+    <p>说完、等待、回答</p>
+    <span>像语音菜单</span>
+  </div>
+  <div class="bidi-arrow" v-click>→</div>
+  <div class="bidi-box new" v-click>
+    <h2>同频协作</h2>
+    <p>边听边说、可打断、能调整</p>
+    <span>像实时助理</span>
+  </div>
+</div>
+
+<div class="wave-row" v-click style="display:flex;align-items:flex-end;justify-content:center;gap:8px;width:320px;height:70px;margin:42px auto 0;">
+  <span style="display:block;flex:0 0 16px;width:16px;height:28px;border-radius:999px;background:linear-gradient(180deg,#2563eb,#14b8a6);"></span>
+  <span style="display:block;flex:0 0 16px;width:16px;height:54px;border-radius:999px;background:linear-gradient(180deg,#2563eb,#14b8a6);"></span>
+  <span style="display:block;flex:0 0 16px;width:16px;height:40px;border-radius:999px;background:linear-gradient(180deg,#2563eb,#14b8a6);"></span>
+  <span style="display:block;flex:0 0 16px;width:16px;height:66px;border-radius:999px;background:linear-gradient(180deg,#2563eb,#14b8a6);"></span>
+  <span style="display:block;flex:0 0 16px;width:16px;height:36px;border-radius:999px;background:linear-gradient(180deg,#2563eb,#14b8a6);"></span>
+  <span style="display:block;flex:0 0 16px;width:16px;height:52px;border-radius:999px;background:linear-gradient(180deg,#2563eb,#14b8a6);"></span>
+</div>
+
+<!--
+讲法：语音 AI 最大的问题不是会不会回答，而是交互节奏。真正自然的语音助手必须能被打断，能继续保持任务上下文。
+[click] 先讲旧模式。
+[click] 过渡到新模式。
+[click] 最后用波形强调实时感。
+-->
+
+---
+layout: section
+class: battle-section
+---
+
+# 6 月模型战：能力进入同一战场
+
+<!--
+转场页。这里可以停顿一下：前面是 GPT-5.6 的能力方向，后面看为什么这个时间点大家都在卷同一批能力。
+-->
+
+---
+layout: default
+---
+
+# 竞争棋盘
+
+<div class="battle-board">
+  <div class="battle-card anthropic" v-click>
+    <h2>Anthropic</h2>
+    <p>Mythos / Fable 叙事：推理、编码、复杂任务。</p>
+  </div>
+  <div class="battle-card google" v-click>
+    <h2>Google</h2>
+    <p>Gemini 叙事：超长上下文、Deep Think、多模态。</p>
+  </div>
+  <div class="battle-card openai" v-click>
+    <h2>OpenAI</h2>
+    <p>GPT-5.6 叙事：UI、视觉、Agent、语音入口。</p>
+  </div>
+</div>
+
+<div class="battle-axis" v-click>
+  <span>Benchmark</span>
+  <b></b>
+  <span>Workflow</span>
+</div>
+
+<!--
+这里不要陷入谁赢谁输。重点是三家都在向同一个方向收敛：从公开榜单竞争，转向真实工作流竞争。
+-->
+
+---
+layout: default
+---
+
+# 企业采用看这四个数
+
+<div class="adoption-grid">
+  <div v-click>
+    <b>一次成功率</b>
+    <span>不用反复改 prompt 的比例</span>
+  </div>
+  <div v-click>
+    <b>人工接管率</b>
+    <span>任务中途需要人救场的次数</span>
+  </div>
+  <div v-click>
+    <b>端到端成本</b>
+    <span>Token、延迟、重试、人审综合成本</span>
+  </div>
+  <div v-click>
+    <b>可审查性</b>
+    <span>输出是否能解释、回滚、复现</span>
+  </div>
+</div>
+
+<!--
+这一页把话题从模型热度拉回企业现实。最终采购不会只看“哪个模型更强”，而是看任务能不能稳定完成、成本是否可控。
+-->
+
+---
+layout: two-cols-header
+layoutClass: gap-10
+---
+
+# 发布后 72 小时评测清单
+
+::left::
+
+<v-clicks>
+
+- 同一批真实任务，不换 prompt
+- 记录首轮输出、修复轮数、失败原因
+- 同时跑 UI、代码、视觉、长上下文、语音任务
+
+</v-clicks>
+
+::right::
+
+<div class="check-panel" v-click>
+  <h2>目标</h2>
+  <p>用自己的业务任务判断价值，而不是等别人替你定义榜单。</p>
+</div>
+
+<!--
+这一页给观众一个可执行动作：发布后不要只刷测评视频，直接拿自己的任务集跑。72 小时足够建立第一版采用判断。
+-->
+
+---
+layout: center
+class: final-call
+---
+
+# 结论
+
+<div class="final-grid">
+  <div v-click>
+    <b>看方向</b>
+    <span>UI、视觉、Agent、语音正在合流。</span>
+  </div>
+  <div v-click>
+    <b>看场景</b>
+    <span>真正价值来自真实工作流，而不是单点演示。</span>
+  </div>
+  <div v-click>
+    <b>看成本</b>
+    <span>能力、价格、稳定性会共同决定采用速度。</span>
+  </div>
+</div>
+
+<!--
+最后三句话收束全场：看方向、看场景、看成本。不要把重点放在爆料本身，而是放在下一阶段模型产品化的竞争逻辑。
+-->
+
+---
+
+# 资料来源
+
+<div class="sources">
+
+- 知乎 / 量子位：《GPT-5.6首批实测来了！精准狙击Mythos》，2026-06-10  
+  https://zhuanlan.zhihu.com/p/2048051453957255944
+- CSDN 转载：《OpenAI背水一战！GPT-5.6 Pro凭空作画、GPT-Bidi-1双向对谈》，2026-06-23  
+  https://blog.csdn.net/techforward/article/details/162240195
+- 搜狐移动页，用户提供链接  
+  https://m.sohu.com/a/1040423777_211762
+- BNext 数位时代，用户提供链接  
+  https://www.bnext.com.tw/article/91303/gpt-5-6-pro-openai-the-sims-reasoning-25-percent
+- OpenAI 官方网站，用于核对公开发布信息  
+  https://openai.com/
+
+</div>
+
+<!--
+资料页不需要展开讲太久。只提醒观众：本 deck 是网络资料观察，后续如果 OpenAI 正式发布，需要更新数据和结论。
+-->
+
+---
+layout: cover
+title: 谢谢
+background: https://cover.sli.dev
+---
+
+# 谢谢!
