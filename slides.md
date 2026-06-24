@@ -1,9 +1,12 @@
 ---
 theme: seriph
 title: 风起于未至之境
-info: |
-  基于 2026-06-23 网络公开资料整理。相关内容来自媒体报道、社区讨论与公开网页，
-  不代表官方发布信息，可能存在不准确或后续变化。
+titleTemplate: '%s'
+favicon: 'https://s.nmxc.ltd/sakurairo_vision/@3.0/basic/favicon.ico'
+info: false
+# info: |
+  # 基于 2026-06-23 网络公开资料整理。相关内容来自媒体报道、社区讨论与公开网页，
+  # 不代表官方发布信息，可能存在不准确或后续变化。
 class: deck-root
 drawings:
   persist: false
